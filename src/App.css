@@ -1,10 +1,59 @@
+html, body, #root, .app {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #1D9BF0;
+  color: aliceblue;
+}
+
 .app {
-  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  margin: 0;
+  padding: 0 20vw;
 }
-svg {
-  color: white;
+
+@media (max-width: 320px) {
+  .app {
+    padding: 0 5vw;
+  }
+}
+
+#quote-box {
+  padding: 20px;
+  min-height: 30vh;
+  border: white solid 5px;
+  border-radius: 4px;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+  transition: filter .300s;
+}
+img:hover {
+  filter: brightness(0) invert(1) drop-shadow(0 0 1em #fff);
+}
+
+.paper {
+  padding: 20px 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.text-container {
+  margin-bottom: 20px;
+}
+
+.disabled {
+  filter: brightness(.1) invert(.8);
+}
+.disabled:hover {
+  filter: brightness(.1) invert(.8)drop-shadow(0 0 1em #668);
 }
